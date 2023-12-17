@@ -1,0 +1,133 @@
+.header {
+    background-color: #131921;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  .header_logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  
+  .header_logoImage {
+    /* Add your styling for the StoreIcon here. */
+    /* Example: */
+    color: #FF9900;
+    font-size: 2rem; /* Adjust icon size as needed */
+    margin-right: 5px;
+  }
+  
+  .header_logoTitle {
+    font-size: 1.0rem; /* Adjust the font-size as needed */
+    font-weight: 800;
+    margin-left: 8px;
+  }
+  
+  .header_searchbar {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    border-radius: 24px;
+  }
+  
+  .header_searchInput {
+    height: 12px;
+    padding: 10px;
+    border: none;
+    width: 100%;
+    border-radius: 2px;
+    margin-right: 8px;
+  }
+  
+  .header_searchIcon {
+    padding: 5px;
+    height: 22px !important;
+    background-color: #cd9042;
+  }
+  
+  .header_nav {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  .nav_item {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .nav_itemOne {
+    font-size: 10px;
+  }
+  
+  .ShoppingCartIcon {
+    /* Add your styling for the ShoppingCartIcon here. */
+    /* Example: */
+    color: white;
+    font-size: 1.5rem; /* Adjust icon size as needed */
+  }
+ 
+  
+  /*Responsiveness*/
+
+  @media (max-width: 768px) {
+    .header {
+      height: 35px; /* You can adjust the height if needed */
+    }
+
+    .header_logo {
+      height: 40px; /* You can adjust the height if needed */
+      margin-right: 10px;
+    }
+
+    .header_searchbar {
+      margin-right: 10px;
+    }
+  
+    .header_logoTitle {
+      font-size: 0.7rem; /* Smaller font size for mobile */
+    }
+  
+    .header_logoImage {
+      font-size: 1rem; /* Smaller icon size for mobile */
+    }
+  
+    .header_searchInput {
+      padding: 5px; /* Adjust padding to reduce size */
+      margin-right: 5px;
+    }
+  
+    .header_searchIcon {
+      padding: 3px; /* Adjust padding to reduce size */
+      width: 0.25%;
+      height: 12px; /* Adjust for mobile */
+    }
+  
+    .nav_item {
+      font-size: 20px;
+      padding: 1px;
+      margin-left: 5px;
+      padding-top: 8px;
+      margin-right: 5px;
+    }
+  
+    .nav_itemOne {
+      font-size: 6px; /* Smaller font size for mobile */
+    }
+  
+    .ShoppingCartIcon {
+      font-size: 1.2rem; /* Smaller icon size for mobile */
+    }
+  }

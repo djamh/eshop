@@ -1,0 +1,143 @@
+/* Resetting styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Styles for the checkout product container */
+  .checkoutProduct {
+  font-family: 'Lora', serif;
+  justify-content: space-between; /* Space out children along the main axis */
+  display: flex;
+  align-items: flex-start; /* Align items to the start vertically */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  margin: 16px auto; /* Adjust for your layout */
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: #fff;
+  width: 900px; /* Fixed width */
+  height: auto; /* Height is auto to fit content */
+  padding: 16px; /* Padding inside the container */
+  }
+  
+  /* Styles for the product image */
+  .checkoutProduct_image {
+    object-fit: contain;
+    width: 250px; /* Fixed width for image */
+    height: 200px; /* Fixed height for image */
+    margin-right: 16px; /* Space between image and product info */
+  }
+  
+  /* Styles for the product info section */
+  .checkoutProduct_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Space between title and button */
+    flex-grow: 1;
+    height: 200px;
+  }
+  
+  
+  /* Styles for the product title */
+  .checkoutProductTitle p {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #0a0a0a;
+    margin-bottom: 4px; /* Reduced space below title */
+  }
+  
+  /* Styles for the product price */
+  .checkoutProduct_price {
+    display: flex;
+    align-items: baseline;
+    font-weight: bold;
+  }
+  
+  /* Styles for dollars and cents */
+  .checkoutPrice_dollars {
+    font-size: 20px; /* Larger font size for dollars */
+  }
+  
+  .checkoutPrice_cents {
+    font-size: 16px; /* Smaller font size for cents */
+  }
+  
+  /* Styles for the product rating */
+  .checkoutProduct_rating {
+    display: flex;
+    font-size: 14px;
+    color: #FFA41C;
+  }
+  
+  /* Styles for the remove button */
+  .product_removeCartButton {
+    background-color: #f0c14b;
+    border: 1px solid;
+    border-color: #a88734 #9c7e31 #846a29;
+    border-radius: 3px;
+    align-self: flex-end; /* Align the button to the right */
+    padding: 5px 16px; /* Smaller padding */
+    font-size: 12px; /* Smaller font size */
+    margin-top: auto; /* Push the button to the bottom */
+    margin-bottom: 0; /* No margin at the bottom */
+    font-weight: bold;
+    color: #111;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative; /* Absolute positioning for the button */
+    bottom: 0px; /* Distance from bottom */
+    right: 16px; /* Distance from right */
+  }
+  
+  .product_removeCartButton:hover {
+    background-color: #f7ca00;
+    border-color: #e5a00d;
+  }
+  
+  .product_removeCartButton:active {
+    box-shadow: 0 1px 4px rgba(0,0,0,0.4) inset;
+  }
+
+  /* Media query for mobile view */
+@media (max-width: 768px) {
+    .checkoutProduct {
+      width: 100%; /* Full width for mobile screens */
+      padding: 10px; /* Reduced padding */
+      margin: 8px 0; /* Adjusted margin */
+      box-shadow: 0 1px 4px rgba(0,0,0,0.2); /* Slightly lighter shadow */
+    }
+  
+    .checkoutProduct_image {
+      width: 150px; /* Smaller width for the image */
+      height: 120px; /* Smaller height for the image */
+      margin-right: 8px; /* Smaller margin */
+    }
+  
+    .checkoutProduct_info {
+      height: auto; /* Auto height to accommodate smaller size */
+    }
+  
+    .checkoutProductTitle p {
+      font-size: 0.9rem; /* Smaller font size */
+    }
+  
+    .checkoutPrice_dollars {
+      font-size: 18px; /* Slightly smaller font size for dollars */
+    }
+  
+    .checkoutPrice_cents {
+      font-size: 14px; /* Slightly smaller font size for cents */
+    }
+  
+    .checkoutProduct_rating {
+      font-size: 12px; /* Smaller font size for rating */
+    }
+  
+    .product_removeCartButton {
+      padding: 4px 8px; /* Smaller padding */
+      font-size: 11px; /* Smaller font size */
+      bottom: 8px; /* Adjusted distance from bottom */
+      right: 8px; /* Adjusted distance from right */
+    }
+  }

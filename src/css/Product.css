@@ -1,0 +1,93 @@
+/* Start by resetting any margin, padding, and box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .product {
+    font-family: 'Lora', serif; /* Change the font to match the one in your image */
+    width: 200px; /* Adjust the width as necessary */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3); /* This adds a subtle shadow to your product div */
+    margin: 16px; /* Space around the product */
+    border-radius: 4px; /* Slightly rounded corners for the product div */
+    overflow: hidden; /* Ensures the child elements do not overflow */
+    width: 200px; /* This sets a fixed width for each product */
+    height: 350px; /* This sets a fixed height for each product */
+    background-color: rgba(255, 255, 255, 1);
+    opacity: 1;
+    justify-content: space-between; 
+  }
+  
+  .product_image {
+    margin: 3px 3px;
+    height: 200px;
+    width: 100%; /* Image takes the full width of the container */
+    object-fit: contain; /* This will ensure the image covers the area nicely */
+    background-color: rgba(255, 255, 255, 1);
+    
+  }
+  
+  .product_info {
+    padding: 3px 16px; /* Add some padding inside the product_info div */
+    background-color: rgba(255, 255, 255, 1); /* Assuming a white background is needed */
+  }
+  
+  .product_info > p:first-child {
+    margin-bottom: 8px; /* Add some space below the title */
+    font-weight: 500; /* Make the title bold */
+    color: #0a0a0a; /* A darker text color for the title */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; /* Ensures the text does not wrap */
+  }
+  
+  .product_rating {
+    display:flex;
+    margin-bottom: 8px; /* Add some space below the rating */
+    font-size: 14px; /* Adjust the font size as needed */
+    color: #FFA41C; /* Star rating color */
+  }
+  
+  .product_price {
+    display: flex;
+    align-items: baseline; /* Align the dollar and cents text at their baseline */
+    font-weight: bold;
+    /* Other styles for the price container */
+  }
+  
+  .price_dollars {
+    font-size: 16px; /* Larger font size for dollars */
+    /* Additional styling for dollars if needed */
+  }
+  
+  .price_cents {
+    font-size: 10px; /* Smaller font size for cents */
+    margin-bottom: 2px; /* Optional: Add a little space between dollars and cents */
+    /* Additional styling for cents if needed */
+  }
+
+  .product_addCartButton {
+    background-color: #ffd814; /* Yellow background */
+    border: 2px solid #fcd200; /* Slightly darker yellow border */
+    border-radius: 8px; /* More rounded corners */
+    padding: 5px 10px; /* Smaller top and bottom padding, left and right padding */
+    font-size: 10px; /* Smaller font size */
+    font-weight: Demi Bold; /* Bold font */
+    color: black; /* Text color */
+    cursor: pointer; /* Change mouse cursor to pointer */
+    outline: none; /* Remove outline */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Slight shadow for depth */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+    margin: 0px 5px 20px 10px;;
+  }
+  
+  .product_addCartButton:hover {
+    background-color: #f7ca00; /* Slightly darker yellow on hover */
+    border-color: #e5a00d; /* Darker border color on hover */
+  }
+  
+  .product_addCartButton:active {
+    box-shadow: 0 1px 4px rgba(0,0,0,0.4) inset; /* Inner shadow to give a 'pressed' effect */
+  }
+  

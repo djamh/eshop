@@ -1,0 +1,56 @@
+/* Subtotal container */
+.subtotal {
+    border: 1px solid #ddd; /* Light grey border */
+    border-radius: 4px; /* Slightly rounded corners */
+    padding: 20px; /* Padding inside the container */
+    margin-bottom: 20px; /* Space below the container */
+  }
+  
+  /* Subtotal text and price */
+  .subtotal p {
+    margin-bottom: 16px; /* Space below the subtotal text */
+    font-size: 18px; /* Larger font size for visibility */
+    font-weight: bold; /* Bold font for the price */
+  }
+  
+  .subtotal_gift {
+    display: flex;
+    align-items: center; /* Align the checkbox and label vertically */
+    margin-top: 10px; /* Space above the checkbox */
+  }
+  
+  .subtotal_gift input[type='checkbox'] {
+    margin-right: 5px; /* Space between the checkbox and the label */
+  }
+  
+  .subtotal_gift label {
+    font-size: 14px; /* Font size for the label */
+  }
+  
+  /* Order button */
+  .subtotal_orderButton {
+    background-color: #f0c14b; /* Yellow background color */
+    border: 1px solid;
+    border-color: #a88734 #9c7e31 #846a29;
+    border-radius: 3px; /* Slightly rounded corners for the button */
+    width: 100%; /* Button takes the full width of the container */
+    padding: 10px 0; /* Padding inside the button */
+    font-size: 16px; /* Larger font size for the button text */
+    color: #111; /* Dark color for the button text */
+    font-weight: bold; /* Bold font for the button text */
+    cursor: pointer; /* Cursor indicates the button is clickable */
+    transition: all 0.3s ease; /* Transition for hover effects */
+  }
+  
+  /* Hover effect for the button */
+  .subtotal_orderButton:hover {
+    background-color: #f7ca00; /* Slightly lighter yellow on hover */
+    border-color: #e5a00d; /* Border color changes on hover */
+  }
+  
+  /* Active effect for the button */
+  .subtotal_orderButton:active {
+    position: relative;
+    top: 2px; /* Button moves down slightly when pressed */
+    box-shadow: none; /* Removes shadow effect when pressed */
+  }
