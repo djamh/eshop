@@ -1,14 +1,29 @@
 import React from 'react'
 import "./css/Product.css"
-import { useStateValue } from './StateProvider';
+import  {useStateValue}  from './StateProvider';
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet"></link>
 
 
 function Product({id,title,rating,image,price}) {
-    const [state, dispatch] = useStateValue(); // Get dispatch from context
 
+    const [state, dispatch] = useStateValue(); // Get dispatch from context
+    console.log('State:', state, 'Dispatch:', dispatch); // This will print state and dispatch
     
+
+    const addToBasket = () => {
+        // Dispatch the item into the data layer
+        dispatch({
+            type: 'ADD_TO_BASKET',
+            item: {
+                id: id,
+                title: title,
+                rating: rating,
+                image: image,
+                price: price
+            }
+        });
+    };
 
 
     //Splitting price in 2 parts
@@ -34,7 +49,7 @@ function Product({id,title,rating,image,price}) {
                 <span className='price_cents'>{priceParts[1]}</span>$
                     </p>
             </div>
-            <button  className='product_addCartButton'>Add to Basket</button>
+            <button onClick={addToBasket} className='product_addCartButton'>Add to Basket</button>
            
             
         </div>

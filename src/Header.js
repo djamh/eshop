@@ -5,9 +5,11 @@ import StoreIcon from '@mui/icons-material/Store';
 import SearchIcon from '@mui/icons-material/Search';
 import useIsMobile from "./Utilities.js";
 import {Link} from "react-router-dom";
+import { useStateValue } from './StateProvider.js';
 
 function Header() {
   const isMobile = useIsMobile();
+  const [{ basket }, dispatch] = useStateValue();  // Corrected destructuring
 
   
 
@@ -39,7 +41,7 @@ function Header() {
                 <Link to='/checkout' style={{textDecoration:'none'}}>
                   <div className="nav_item">
                   <ShoppingCartIcon fontSize={isMobile ? 'string' : 'medium'} className="itemBasket"></ShoppingCartIcon>
-                  <span className="nav_itemOne nav_basketCount">Number Here</span>
+                  <span className="nav_itemOne nav_basketCount">{basket.length}</span>
                   </div>
                 </Link>
                 
