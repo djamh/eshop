@@ -1,3 +1,13 @@
+# Notes
+In firebase.js, add your own firebase API key to create the connection to your project
+
+## Still to implement
+- Search bar
+- Link products to real inventory
+- Manage quantities instead of duplicate products
+- Add item descritpion page
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
