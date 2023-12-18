@@ -57,6 +57,7 @@
   .header_nav {
     display: flex;
     justify-content: space-evenly;
+    position: relative;
   }
   
   .nav_item {
@@ -77,6 +78,26 @@
     /* Example: */
     color: white;
     font-size: 1.5rem; /* Adjust icon size as needed */
+  }
+
+  .nav_basketCount {
+    position: absolute; /* Position the basket count absolutely within .header_nav */
+    top: 0px; /* Adjust top position to fit over the cart icon */
+    right: 11px; /* Adjust right position to align with the cart icon */
+    color: black; /* Change color to black */
+    background-color: rgba(255, 255, 255, 0); /* Add a background color if necessary */
+    border-radius: 10px; /* Round the corners of the basket count */
+    padding: 2px 6px; /* Add some padding inside the basket count */
+    font-size: 8px; /* Adjust the font size */
+    font-weight: bold; /* Make the font weight bold */
+    min-width: 20px; /* Ensure the width is enough to handle double digits */
+    text-align: center; /* Center the text */
+  }
+
+  .itemBasket {
+    color: white; /* Set the color of the ShoppingCartIcon */
+    font-size: 1.5rem; /* Adjust icon size as needed */
+    /* If you want to adjust the icon size on mobile, you will need to use media query */
   }
  
   
@@ -130,4 +151,18 @@
     .ShoppingCartIcon {
       font-size: 1.2rem; /* Smaller icon size for mobile */
     }
+
+    .nav_basketCount {
+      top: 9px; /* Slightly higher position on mobile */
+      right: 5px; /* Right position adjusted for smaller screens */
+      font-size: 6px; /* Smaller font size */
+      padding: 1px 5px; /* Smaller padding */
+    }
+  
+    .itemBasket {
+      font-size: 1.2rem; /* Smaller icon size on mobile */
+    }
+  
+
+
   }
