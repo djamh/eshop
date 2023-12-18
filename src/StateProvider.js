@@ -15,6 +15,6 @@ export const StateProvider = ({ reducer, initialState, children }) => (
 
 export const useStateValue = () => {
     const contextValue = useContext(StateContext);
-    console.log(contextValue);  // Debugging line
+    //console.log(contextValue);  // Debugging line
     return contextValue;
 };

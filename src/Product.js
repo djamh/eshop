@@ -1,28 +1,35 @@
 import React from 'react'
 import "./css/Product.css"
 import  {useStateValue}  from './StateProvider';
+import { updateUserBasket } from './Utilities';
+import { addUserBasketToFirestore } from "./Utilities";
+
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet"></link>
 
 
 function Product({id,title,rating,image,price}) {
 
-    const [state, dispatch] = useStateValue(); // Get dispatch from context
-    console.log('State:', state, 'Dispatch:', dispatch); // This will print state and dispatch
+    const [{basket,user }, dispatch] = useStateValue(); // Get dispatch from context
     
 
     const addToBasket = () => {
+        const newItem = {
+            id,
+            title,
+            rating,
+            image,
+            price
+        };
         // Dispatch the item into the data layer
         dispatch({
             type: 'ADD_TO_BASKET',
-            item: {
-                id: id,
-                title: title,
-                rating: rating,
-                image: image,
-                price: price
-            }
+            item: newItem
         });
+        if (user) {
+            const updatedBasket = [...basket, newItem];
+            updateUserBasket(user.uid, updatedBasket);
+        }
     };
 
 

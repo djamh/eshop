@@ -35,7 +35,26 @@ const reducer = (state, action) => {
                 ...state,
                 basket: newBasket
             };
-        // ... other action handlers ...
+        case 'CLEAR_BASKET':
+                return {
+                    ...state,
+                    basket: [], // Clears the basket
+                };
+
+        case 'SET_BASKET':
+            console.log("Setting basket in state:", action.basket); // Debugging line
+                return {
+                    
+                    ...state,
+                    basket: action.basket, // Sets the basket with provided items
+                };
+
+        case 'SET_USER':
+                    return {
+                        ...state,
+                        user: action.user, // Sets the current user
+                    };
+
         default:
             return state;
     }

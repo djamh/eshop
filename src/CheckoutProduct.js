@@ -1,6 +1,7 @@
 import React from 'react'
 import './css/CheckoutProduct.css'
 import { useStateValue } from './StateProvider';
+import { updateUserBasket } from './Utilities';
 
 function CheckoutProduct({id,title,rating,image,price}) {
 
