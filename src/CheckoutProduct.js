@@ -1,27 +1,45 @@
 import React from 'react'
 import './css/CheckoutProduct.css'
+import { useStateValue } from './StateProvider';
 
-function CheckoutProduct() {
+function CheckoutProduct({id,title,rating,image,price}) {
+
+  const [state, dispatch] = useStateValue(); // Get dispatch from context
+
+  const removeFromBasket = () => {
+    // Remove item from basket...
+    dispatch({
+        type: 'REMOVE_FROM_BASKET',
+        id: id, // Pass the id of the item to be removed
+    });
+};
+
+
+  //Splitting price in 2 parts
+  const priceParts = price.toFixed(2).split('.');
 
   return (
     <div>
        
         <div className="checkoutProduct">
-            <img src='https://www.thebrick.com/cdn/shop/products/artemchr_ac_04_1400x.jpg?v=1655395445' alt="" className='checkoutProduct_image'/>
+            <img src={image} alt="" className='checkoutProduct_image'/>
 
             <div className="checkoutProduct_info">
-                <div className='checkoutProductTitle'><p>Title</p></div>
+                <div className='checkoutProductTitle'><p>{title}</p></div>
                 
                 <p className='checkoutProduct_price'>
-                <span className='checkoutPrice_dollars'>59</span>
-                <span className='checkoutPrice_cents'>99</span>$
+                <span className='checkoutPrice_dollars'>{priceParts[0]}</span>
+                <span className='checkoutPrice_cents'>{priceParts[1]}</span>$
                 </p>
 
                 <div className="checkoutProduct_rating">
-                   <p>⭐</p> 
+                   {/* Ensure rating is defined and is a number */}
+                   {rating && !isNaN(rating) && Array(rating)
+                        .fill()
+                        .map((_, i) => (<p key={i}>⭐</p>))}
                     
                 </div>
-                <button className='product_removeCartButton'>Remove from Basket</button>
+                <button onClick={removeFromBasket}className='product_removeCartButton'>Remove from Basket</button>
                 
             </div>
             

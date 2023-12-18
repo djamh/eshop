@@ -1,5 +1,5 @@
 .home {
-    max-width: 1500px;
+    max-width: 1600px;
     margin: 0 auto;
     padding: 0 0px;
   }
@@ -14,6 +14,7 @@
     z-index: -1;
     margin-bottom: -300px; /* This value might need to be adjusted based on the actual image size */
     mask-image: linear-gradient(to bottom, rgba(0,0,0,1)50%, rgba(0,0,0,0)76%);
+    position: relative;
     object-fit: cover; 
     left: 0; /* Align to the left edge */
     top: 0; 

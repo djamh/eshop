@@ -3,6 +3,7 @@ import "./css/Home.css";
 import Product from './Product';
 import { useState, useEffect } from 'react';
 
+
 function Home() {
     const [productRows, setProductRows] = useState([]);
 
