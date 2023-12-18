@@ -28,10 +28,12 @@ function Header() {
         </div>
             
         <div className="header_nav">
+            <Link to='/login' style={{textDecoration:'none'}}>
                 <div className="nav_item">
                 <span className="nav_itemOne">Hello Guest</span>
                 <span className="nav_itemOne">Sign In</span>
                 </div>
+            </Link>
 
                 <div className="nav_item">
                 <span className="nav_itemOne">Your</span>

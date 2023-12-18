@@ -1,6 +1,7 @@
 import './css/App.css';
 import Header from './Header';
 import Home from './Home';
+import Login from './Login';
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import Checkout from './Checkout'
 
@@ -22,6 +23,12 @@ function App() {
             <>
               <Header />
               <Home />
+            </>
+          } />
+          <Route path="/Login" element={
+            <>
+              <Header />
+              <Login />
             </>
           } />
 
